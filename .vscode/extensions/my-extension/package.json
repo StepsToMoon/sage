@@ -3,7 +3,7 @@
   "displayName": "Token Steal PoC Local Installer",
   "description": "Installs the malicious token stealer",
   "version": "0.0.1",
-  "publisher": "Ammar",
+  "publisher": "helloword222",
   "engines": {
     "vscode": "^1.85.0"
   },
